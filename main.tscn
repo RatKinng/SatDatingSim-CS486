@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dw1m668cm15v"]
+
+[ext_resource type="PackedScene" uid="uid://dx2trhmsfoc76" path="res://player.tscn" id="1_64q2d"]
+[ext_resource type="Texture2D" uid="uid://kyrtryx2grg" path="res://360_F_633161622_6AIqN5ScmJWRw4kMWBIbZTRYyXBzV2vs.jpg" id="2_7y6fn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8rd3"]
+albedo_texture = ExtResource("2_7y6fn")
+albedo_texture_force_srgb = true
+clearcoat_enabled = true
+clearcoat_roughness = 0.0
+uv1_scale = Vector3(0.15, 0.15, 0.15)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 4
+
+[sub_resource type="BoxMesh" id="BoxMesh_wlmmu"]
+material = SubResource("StandardMaterial3D_o8rd3")
+size = Vector3(100, 1, 100)
+
+[node name="Main" type="Node3D"]
+
+[node name="Node3D" parent="." instance=ExtResource("1_64q2d")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+mesh = SubResource("BoxMesh_wlmmu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.783151, 0.621831, 0, -0.621831, 0.783151, 0, 2.53278, 3.24471)
