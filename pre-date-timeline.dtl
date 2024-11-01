@@ -1,0 +1,6 @@
+[background arg="res://bg1.jpg" fade="0.0"]
+join cpp-character center [animation="Bounce In" z_index="10"]
+cpp-character: HELLO WORLD
+update cpp-character right [move_time="0.5"]
+join ARC2character left
+ARC2character: Hi
