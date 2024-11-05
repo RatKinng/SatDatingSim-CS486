@@ -4,3 +4,5 @@ cpp-character: HELLO WORLD
 update cpp-character right [move_time="0.5"]
 join ARC2character left
 ARC2character: Hi
+[text_input text="Please tell us your name:" default="Excahauler"]
+[end_timeline]
