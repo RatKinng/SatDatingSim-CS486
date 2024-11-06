@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8hdwtn31x55o"]
+
+[ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+texture = ExtResource("1_f2fy1")
+
+[node name="AmppsBetter" type="Sprite2D" parent="."]
+position = Vector2(582, 305)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_f2fy1")
