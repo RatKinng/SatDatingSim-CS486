@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=3 format=3 uid="uid://c10dqwyyup1x2"]
 
 [ext_resource type="Texture2D" uid="uid://cxl4566rwhsc4" path="res://ampps_better.png" id="1_y3lex"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://mf8w1668q1p5"]
+
+[ext_resource type="Texture2D" uid="uid://chx1ky015xljy" path="res://ampps.png" id="1_7ojqh"]
+[ext_resource type="Texture2D" uid="uid://dh0rgn7tkxwi5" path="res://ampps_better.png" id="2_4hgjc"]
+>>>>>>> f856487194f599c9f59c989ab7abeff30837880e
 
 [sub_resource type="Curve" id="Curve_x2d85"]
 max_value = 200.0
@@ -10,11 +17,23 @@ point_count = 2
 [node name="Node2D" type="Node2D"]
 
 [node name="D8" type="MeshInstance2D" parent="."]
+<<<<<<< HEAD
 texture = ExtResource("1_y3lex")
+=======
+texture = ExtResource("1_7ojqh")
+>>>>>>> f856487194f599c9f59c989ab7abeff30837880e
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(481, 84)
 
+<<<<<<< HEAD
+=======
+[node name="AmppsBetter" type="Sprite2D" parent="."]
+position = Vector2(486, 93)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_4hgjc")
+
+>>>>>>> f856487194f599c9f59c989ab7abeff30837880e
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 position = Vector2(50, 60)
 gravity = Vector2(70, 0)
@@ -25,8 +44,11 @@ anim_speed_max = 56.05
 anim_speed_curve = SubResource("Curve_x2d85")
 anim_offset_min = 0.2
 anim_offset_max = 0.3
+<<<<<<< HEAD
 
 [node name="AmppsBetter" type="Sprite2D" parent="."]
 position = Vector2(484, 76)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_y3lex")
+=======
+>>>>>>> f856487194f599c9f59c989ab7abeff30837880e
