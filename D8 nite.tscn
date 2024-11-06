@@ -1,13 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=3 format=3 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
+[ext_resource type="Script" path="res://mold.gd" id="2_rhhuq"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-texture = ExtResource("1_f2fy1")
 
 [node name="AmppsBetter" type="Sprite2D" parent="."]
 position = Vector2(582, 305)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_f2fy1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(678.2, 321.8)
+scale = Vector2(0.2, 0.2)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(290, 388)
+gravity = Vector2(100, 300)
+scale_amount_min = 10.0
+scale_amount_max = 50.0
+script = ExtResource("2_rhhuq")
