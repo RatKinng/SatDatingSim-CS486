@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c10dqwyyup1x2"]
+
+[ext_resource type="Texture2D" uid="uid://cxl4566rwhsc4" path="res://ampps_better.png" id="1_y3lex"]
+
+[sub_resource type="Curve" id="Curve_x2d85"]
+max_value = 200.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.52809, 116.484), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="Node2D" type="Node2D"]
+
+[node name="D8" type="MeshInstance2D" parent="."]
+texture = ExtResource("1_y3lex")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(481, 84)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(50, 60)
+gravity = Vector2(70, 0)
+initial_velocity_min = 70.71
+initial_velocity_max = 232.33
+anim_speed_min = 10.0
+anim_speed_max = 56.05
+anim_speed_curve = SubResource("Curve_x2d85")
+anim_offset_min = 0.2
+anim_offset_max = 0.3
+
+[node name="AmppsBetter" type="Sprite2D" parent="."]
+position = Vector2(484, 76)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_y3lex")
