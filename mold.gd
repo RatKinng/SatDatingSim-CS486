@@ -9,8 +9,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	var y_to_parent = get_position().y
-	var x_to_parent = get_position().x
+	var y_to_parent = get_position().y # Distance from parent to particles in y
+	var x_to_parent = get_position().x # Distance from parent to particles in x
 	var x_movement;
 	var y_movement;
 	
@@ -27,6 +27,5 @@ func _process(delta: float) -> void:
 	
 #	Create the attack pattern
 	var attack_vec = Vector2(x_movement, y_movement)
-	print(x_to_parent)
 	if(y_to_parent != 0):
 		transform = Transform2D(0.0, attack_vec);
