@@ -29,3 +29,7 @@ func _process(delta: float) -> void:
 	var attack_vec = Vector2(x_movement, y_movement)
 	if(y_to_parent != 0):
 		transform = Transform2D(0.0, attack_vec);
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("fart")
