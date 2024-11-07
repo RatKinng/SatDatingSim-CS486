@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=4 format=3 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
+[ext_resource type="Texture2D" uid="uid://bqkxgh3fv00gv" path="res://lightningbolt.png" id="2_ko4x7"]
 [ext_resource type="Script" path="res://mold.gd" id="2_rhhuq"]
 
 [node name="Node2D" type="Node2D"]
@@ -15,8 +16,11 @@ position = Vector2(678.2, 321.8)
 scale = Vector2(0.2, 0.2)
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-position = Vector2(290, 388)
+position = Vector2(350, 388)
+texture = ExtResource("2_ko4x7")
+emission_shape = 1
+emission_sphere_radius = 75.95
 gravity = Vector2(100, 300)
-scale_amount_min = 10.0
-scale_amount_max = 50.0
+scale_amount_min = 0.07
+scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
