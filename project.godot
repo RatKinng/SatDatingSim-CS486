@@ -22,10 +22,13 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"AMPPScharacter": "res://AMPPScharacter.dch",
 "ARC2character": "res://ARC2character.dch",
+"GamerScopecharacter": "res://GamerScopecharacter.dch",
 "cpp-character": "res://cpp-character.dch"
 }
 directories/dtl_directory={
+"hallway-timeline": "res://hallway-timeline.dtl",
 "pre-date-timeline": "res://pre-date-timeline.dtl"
 }
 glossary/default_case_sensitive=true

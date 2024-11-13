@@ -1,8 +1,9 @@
 [background arg="res://bg1.jpg" fade="0.0"]
+update GamerScopecharacter (happy-default) rightmost [move_time="0.5"]
 join cpp-character center [animation="Bounce In" z_index="10"]
-cpp-character: HELLO WORLD
+cpp-character: Hello world!!
 update cpp-character right [move_time="0.5"]
 join ARC2character left
-ARC2character: Hi
+ARC2character: Hi!
 [text_input text="Please tell us your name:" default="Excahauler"]
 [end_timeline]
