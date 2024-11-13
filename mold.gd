@@ -13,17 +13,19 @@ func _process(delta: float) -> void:
 	var x_to_parent = get_position().x # Distance from parent to particles in x
 	var x_movement;
 	var y_movement;
+	var movement = abs(y_to_parent / x_to_parent);
 	
 #	Determine which direction the electrostatic is going to move
 	if(x_to_parent < 0):
-		x_movement = x_to_parent + 1;
+		x_movement = x_to_parent + movement * 5;
 	else:
-		x_movement = x_to_parent - 1;
+		x_movement = x_to_parent - movement * 5;
 		
 	if(y_to_parent < 0):
-		y_movement = y_to_parent + 1;
+		y_movement = y_to_parent + movement * 5;
 	else:
-		y_movement = y_to_parent - 1;
+		y_movement = y_to_parent - movement * 5;
+
 	
 #	Create the attack pattern
 	var attack_vec = Vector2(x_movement, y_movement)
