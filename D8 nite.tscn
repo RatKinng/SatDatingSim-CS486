@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=16 format=4 uid="uid://c8hdwtn31x55o"]
 
+[ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
 [ext_resource type="Script" path="res://static_collider.gd" id="1_uwo34"]
 [ext_resource type="Texture2D" uid="uid://c1axdyo4bjn58" path="res://cleanroom_outside.jpg" id="1_xyty0"]
@@ -33,6 +34,7 @@ shader = ExtResource("4_x373n")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itjgd"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_cwrq0")
 
 [node name="CleanroomOutside" type="Sprite2D" parent="."]
 position = Vector2(652.625, 311.125)
