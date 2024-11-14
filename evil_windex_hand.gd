@@ -15,4 +15,4 @@ func _process(delta: float) -> void:
 	
 func _input(InputEvent) -> void:
 	if InputEvent is InputEventMouseButton and InputEvent.pressed:
-		print("snork")
+		$CPUParticles2D.emitting = true;

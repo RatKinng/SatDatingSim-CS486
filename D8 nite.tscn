@@ -193,6 +193,19 @@ scale = Vector2(0.4, 0.353)
 texture = ExtResource("8_gc066")
 script = ExtResource("9_pt8y7")
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="WindexHand"]
+position = Vector2(51.0404, -387.804)
+emitting = false
+amount = 10
+one_shot = true
+explosiveness = 1.0
+randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 100.0
+gravity = Vector2(0, 0)
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+
 [connection signal="area_shape_entered" from="Area2D" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_entered" from="Area2D" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_entered" from="Area2D" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_area_2d_area_shape_entered"]
