@@ -22,14 +22,14 @@ func _process(delta: float) -> void:
 	var movement = abs(y_to_parent / x_to_parent);		# Should be a direct path to the collision area
 
 	if(mold_x < 0):
-		x_movement = mold_x + 8*(1 - movement);
+		x_movement = mold_x + 5*(1 - movement);
 	else:
-		x_movement = mold_x - 8*(1 - movement);
+		x_movement = mold_x - 5*(1 - movement);
 		
 	if(mold_y < 0):
-		y_movement = mold_y + 8*movement;
+		y_movement = mold_y + 5*movement;
 	else:
-		y_movement = mold_y - 8*movement;
+		y_movement = mold_y - 5*movement;
 
 	
 #	Create the attack pattern
@@ -39,4 +39,5 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	print("fart")
+	#print("fart")
+	pass
