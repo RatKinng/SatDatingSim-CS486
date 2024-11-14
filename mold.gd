@@ -22,14 +22,14 @@ func _process(delta: float) -> void:
 	var movement = abs(y_to_parent / x_to_parent);		# Should be a direct path to the collision area
 
 	if(mold_x < 0):
-		x_movement = mold_x + 5*(1 - movement);
+		x_movement = mold_x + (1 - movement);
 	else:
-		x_movement = mold_x - 5*(1 - movement);
+		x_movement = mold_x - (1 - movement);
 		
 	if(mold_y < 0):
-		y_movement = mold_y + 5*movement;
+		y_movement = mold_y + movement;
 	else:
-		y_movement = mold_y - 5*movement;
+		y_movement = mold_y - movement;
 
 	
 #	Create the attack pattern
@@ -38,6 +38,15 @@ func _process(delta: float) -> void:
 		transform = Transform2D(0.0, attack_vec);
 
 
-func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	#print("fart")
+func _on_particle_area_area_entered(area: Area2D) -> void:
+	#print($".")
+	#print($"BR_particle_area".name)
+	#if(area.name == "BR_particle_area"):
+	#queue_free();
+	pass
+
+
+func _on_spray_particle_area_area_entered(area: Area2D) -> void:
+	#emitter.queue_free();
+	print($".")
 	pass
