@@ -14,10 +14,6 @@ func _process(delta: float) -> void:
 	#if(done == false):
 		#pass
 	#else:
-		#$BR_particle_spawner.emitting = true
-		#$BL_particle_spawner.emitting = true
-		#$UR_particle_spawner.emitting = true
-		#$UL_particle_spawner.emitting = true
 		#var y_to_parent = get_position().y # Distance from parent to particles in y
 		#var x_to_parent = get_position().x # Distance from parent to particles in x
 		
