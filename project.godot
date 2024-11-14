@@ -28,13 +28,19 @@ directories/dch_directory={
 "cpp-character": "res://cpp-character.dch"
 }
 directories/dtl_directory={
+"after_movie_timeline": "res://after_movie_timeline.dtl",
+"ampps_date_timeline": "res://ampps_date_timeline.dtl",
+"arc2_date_timeline": "res://arc2_date_timeline.dtl",
+"ccp_date_timeline": "res://ccp_date_timeline.dtl",
 "hallway-timeline": "res://hallway-timeline.dtl",
 "pre-date-timeline": "res://pre-date-timeline.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]
-layout/default_style="Default"
-variables={}
+layout/default_style=""
+variables={
+"Name": "Exahauler"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true

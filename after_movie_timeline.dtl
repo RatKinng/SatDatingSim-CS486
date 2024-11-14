@@ -1,0 +1,50 @@
+[background arg="res://bg1.jpg" fade="0.0"]
+join ARC2character (arc2) right
+ARC2character: Wow! What a fantastic movie!
+join AMPPScharacter (default) center
+AMPPScharacter: Yeah! It was truly a piece of art!
+join cpp-character (CCP default) left
+cpp-character: Not a single thing was wrong with it either!
+ARC2character: How’d you like it, {Name}?
+- Yes
+	I loved it!!!
+	ARC2character: I know right?! It’s the best movie I’ve ever seen.
+- Meh
+	It was alright...
+	cpp-character: True art can be difficult for some to understand, it’s alright.
+- No
+	That… was the worst thing I’ve ever watched…
+	AMPPScharacter: … I didn’t know you were like that….
+	[end_timeline]
+cpp-character: Well, it seems like Gamer Scope is out for the count
+leave --All--
+join GamerScopecharacter (off) center
+[wait time="5.0"]
+leave GamerScopecharacter
+join ARC2character (arc2) right
+join AMPPScharacter (default) center
+join cpp-character (CCP default) left
+AMPPScharacter: They’ll wake up eventually, don’t worry about it
+ARC2character: Though it is about time for us to go for the night...
+Do you want to walk one of them home?
+- CCP
+	leave AMPPScharacter
+	leave ARC2character
+	update cpp-character center [move_time="0.5"]
+	cpp-character (ccp_blush): Of course you can walk me home, thank you!
+	jump ccp_date_timeline/
+- ARC2
+	leave cpp-character
+	leave AMPPScharacter
+	update ARC2character center [move_time="0.5"]
+	ARC2character (ar2sBlush): Oh! You want to walk me home? I’d be flattered!
+	jump arc2_date_timeline/
+- AMPPS
+	leave ARC2character
+	leave cpp-character
+	update AMPPScharacter center [move_time="0.5"]
+	AMPPScharacter (blush): You want to walk me home? I.. guess you can
+	jump ampps_date_timeline/
+- No one
+	[end_timeline]
+[end_timeline]

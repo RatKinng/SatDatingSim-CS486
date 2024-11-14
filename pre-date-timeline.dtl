@@ -1,9 +1,29 @@
 [background arg="res://bg1.jpg" fade="0.0"]
-update GamerScopecharacter (happy-default) rightmost [move_time="0.5"]
-join cpp-character center [animation="Bounce In" z_index="10"]
-cpp-character: Hello world!!
-update cpp-character right [move_time="0.5"]
-join ARC2character left
-ARC2character: Hi!
-[text_input text="Please tell us your name:" default="Excahauler"]
-[end_timeline]
+GamerScopecharacter: EVERYONE!!!!
+GamerScopecharacter: My friend is here! Introduce yourselves!
+update GamerScopecharacter rightmost [move_time="0.5"]
+join cpp-character center
+cpp-character: Hi there! Gamer Scope’s been talking a lot about you, it’s so great that you could make it!
+cpp-character: I’m CCP
+update cpp-character leftmost [move_time="0.5"]
+join ARC2character center
+ARC2character: I’m ARC2! I’m so glad there’s more people here!
+update ARC2character left [move_time="0.5"]
+join AMPPScharacter center
+AMPPScharacter: I’m AMPPS, it’s great to meet you
+update AMPPScharacter leftmost [move_time="0.5"]
+update cpp-character center [move_time="0.5"]
+cpp-character: What’s your name?
+[text_input var="Name" default="Exahauler"]
+cpp-character: Well it's great to meet you {Name}
+ARC2character: Let’s start this movie night!!!
+GamerScopecharacter: What are we watching?
+AMPPScharacter: It’s Sharknado 3\: Oh Hell No!
+leave --All--
+[background arg="res://movie1.png" fade="0.0"]
+[wait time="5.0"]
+[background arg="res://movie2.png" fade="0.0"]
+[wait time="5.0"]
+[background arg="res://movie3.png" fade="0.0"]
+[wait time="5.0"]
+jump after_movie_timeline/
