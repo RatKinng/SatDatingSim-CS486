@@ -1,10 +1,12 @@
-[gd_scene load_steps=7 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=8 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
 [ext_resource type="Script" path="res://static_collider.gd" id="1_uwo34"]
 [ext_resource type="Script" path="res://date_mover.gd" id="2_dpnwe"]
 [ext_resource type="Texture2D" uid="uid://bqkxgh3fv00gv" path="res://lightningbolt.png" id="2_ko4x7"]
 [ext_resource type="Script" path="res://mold.gd" id="2_rhhuq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_vy4fd"]
 _surfaces = [{
@@ -24,6 +26,10 @@ _surfaces = [{
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(306, 438)
+
+[node name="LoseCollider" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(315, -121)
+shape = SubResource("CircleShape2D_kq3sh")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2(308.642, -110.014)
@@ -48,16 +54,27 @@ scale = Vector2(6.25, 6.25)
 amount = 6000
 lifetime = 120.0
 explosiveness = 0.3
-randomness = 0.5
+randomness = 1.0
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
-emission_sphere_radius = 40.0
+emission_sphere_radius = 100.0
 direction = Vector2(0, 0)
 spread = 10.0
 gravity = Vector2(0, 0)
 scale_amount_min = 0.07
 scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
+
+[node name="Area2D" type="Area2D" parent="Area2D/AmppsBetter/BR_particle_spawner"]
+
+[node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BR_particle_spawner/Area2D"]
+visible = false
+position = Vector2(-1019.28, -121)
+texture = ExtResource("2_ko4x7")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D/AmppsBetter/BR_particle_spawner/Area2D"]
+scale = Vector2(0.0282363, 0.034268)
+polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 12.9, -283, 17.9, -283, 20, -43, 23, -17.7, 23, -265.8, 281, -268, 281, -268, 288.9, -262, 293.9, -262, 296.4, -254.6, 295, -252.4, 295, -227.4, 277, -225.4, 277, 276.7, -62, 278.9, -62, 284.9, -69, 287, -69, 287, -76.9, 281, -82, 281, -84, 10.3, -81.1, 280.6, -256, 282.8, -256, 294.9, -267, 297, -267, 297, -274.9, 291, -280, 291, -282, 284, -282, 284, -282.9)
 
 [node name="UR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(2535.26, -1368.84)
@@ -65,16 +82,27 @@ scale = Vector2(6.25, 6.25)
 amount = 6000
 lifetime = 120.0
 explosiveness = 0.3
-randomness = 0.5
+randomness = 1.0
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
-emission_sphere_radius = 40.0
+emission_sphere_radius = 100.0
 direction = Vector2(0, 0)
 spread = 10.0
 gravity = Vector2(0, 0)
 scale_amount_min = 0.07
 scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
+
+[node name="Area2D" type="Area2D" parent="Area2D/AmppsBetter/UR_particle_spawner"]
+
+[node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UR_particle_spawner/Area2D"]
+visible = false
+position = Vector2(-1019.28, -121)
+texture = ExtResource("2_ko4x7")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D/AmppsBetter/UR_particle_spawner/Area2D"]
+scale = Vector2(0.0282363, 0.034268)
+polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 12.9, -283, 17.9, -283, 20, -43, 23, -17.7, 23, -265.8, 281, -268, 281, -268, 288.9, -262, 293.9, -262, 296.4, -254.6, 295, -252.4, 295, -227.4, 277, -225.4, 277, 276.7, -62, 278.9, -62, 284.9, -69, 287, -69, 287, -76.9, 281, -82, 281, -84, 10.3, -81.1, 280.6, -256, 282.8, -256, 294.9, -267, 297, -267, 297, -274.9, 291, -280, 291, -282, 284, -282, 284, -282.9)
 
 [node name="UL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-2535.26, -1368.84)
@@ -82,16 +110,27 @@ scale = Vector2(6.25, 6.25)
 amount = 6000
 lifetime = 120.0
 explosiveness = 0.3
-randomness = 0.5
+randomness = 1.0
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
-emission_sphere_radius = 40.0
+emission_sphere_radius = 100.0
 direction = Vector2(0, 0)
 spread = 10.0
 gravity = Vector2(0, 0)
 scale_amount_min = 0.07
 scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
+
+[node name="Area2D" type="Area2D" parent="Area2D/AmppsBetter/UL_particle_spawner"]
+
+[node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UL_particle_spawner/Area2D"]
+visible = false
+position = Vector2(-1019.28, -121)
+texture = ExtResource("2_ko4x7")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D/AmppsBetter/UL_particle_spawner/Area2D"]
+scale = Vector2(0.0282363, 0.034268)
+polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 12.9, -283, 17.9, -283, 20, -43, 23, -17.7, 23, -265.8, 281, -268, 281, -268, 288.9, -262, 293.9, -262, 296.4, -254.6, 295, -252.4, 295, -227.4, 277, -225.4, 277, 276.7, -62, 278.9, -62, 284.9, -69, 287, -69, 287, -76.9, 281, -82, 281, -84, 10.3, -81.1, 280.6, -256, 282.8, -256, 294.9, -267, 297, -267, 297, -274.9, 291, -280, 291, -282, 284, -282, 284, -282.9)
 
 [node name="BL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-2535.26, 1368.84)
@@ -99,10 +138,10 @@ scale = Vector2(6.25, 6.25)
 amount = 6000
 lifetime = 120.0
 explosiveness = 0.3
-randomness = 0.5
+randomness = 1.0
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
-emission_sphere_radius = 40.0
+emission_sphere_radius = 100.0
 direction = Vector2(0, 0)
 spread = 10.0
 gravity = Vector2(0, 0)
@@ -110,8 +149,17 @@ scale_amount_min = 0.07
 scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
+[node name="Area2D" type="Area2D" parent="Area2D/AmppsBetter/BL_particle_spawner"]
+
+[node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BL_particle_spawner/Area2D"]
+visible = false
+position = Vector2(-1019.28, -121)
+texture = ExtResource("2_ko4x7")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D/AmppsBetter/BL_particle_spawner/Area2D"]
+scale = Vector2(0.0282363, 0.034268)
+polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 12.9, -283, 17.9, -283, 20, -43, 23, -17.7, 23, -265.8, 281, -268, 281, -268, 288.9, -262, 293.9, -262, 296.4, -254.6, 295, -252.4, 295, -227.4, 277, -225.4, 277, 276.7, -62, 278.9, -62, 284.9, -69, 287, -69, 287, -76.9, 281, -82, 281, -84, 10.3, -81.1, 280.6, -256, 282.8, -256, 294.9, -267, 297, -267, 297, -274.9, 291, -280, 291, -282, 284, -282, 284, -282.9)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(678.2, 321.8)
 scale = Vector2(0.2, 0.2)
-
-[connection signal="body_entered" from="Area2D" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_area_2d_body_entered"]
