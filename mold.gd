@@ -6,12 +6,21 @@ extends CPUParticles2D
 func _ready() -> void:
 	pass
 
-
+#var done = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	#var y_to_parent = get_position().y # Distance from parent to particles in y
-	#var x_to_parent = get_position().x # Distance from parent to particles in x
-	
+	#Dialogic.signal_event.connect(_date_ended)
+#
+	#if(done == false):
+		#pass
+	#else:
+		#$BR_particle_spawner.emitting = true
+		#$BL_particle_spawner.emitting = true
+		#$UR_particle_spawner.emitting = true
+		#$UL_particle_spawner.emitting = true
+		#var y_to_parent = get_position().y # Distance from parent to particles in y
+		#var x_to_parent = get_position().x # Distance from parent to particles in x
+		
 	var loseColliderArea = get_parent().get_parent().get_node("LoseCollider");
 	var y_to_parent = loseColliderArea.get_position().y; # Y coordinate of the lose collision area
 	var x_to_parent = loseColliderArea.get_position().x; # X coordinate of the lose collision area
@@ -36,6 +45,9 @@ func _process(delta: float) -> void:
 	var attack_vec = Vector2(x_movement, y_movement)
 	if(mold_y != 0) or (mold_x != 0):
 		transform = Transform2D(0.0, attack_vec);
+
+#func _date_ended() -> void:
+	#done = true
 
 
 func _on_particle_area_area_entered(area: Area2D) -> void:

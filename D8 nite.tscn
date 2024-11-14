@@ -67,6 +67,7 @@ texture = ExtResource("1_f2fy1")
 [node name="BR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(2535.26, 1368.84)
 scale = Vector2(6.25, 6.25)
+emitting = false
 amount = 2000
 lifetime = 120.0
 explosiveness = 0.3
@@ -95,6 +96,7 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(2535.26, -1368.84)
 scale = Vector2(6.25, 6.25)
+emitting = false
 amount = 2000
 lifetime = 120.0
 explosiveness = 0.3
@@ -123,6 +125,7 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-2535.26, -1368.84)
 scale = Vector2(6.25, 6.25)
+emitting = false
 amount = 2000
 lifetime = 120.0
 explosiveness = 0.3
@@ -151,6 +154,7 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="BL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-2535.26, 1368.84)
 scale = Vector2(6.25, 6.25)
+emitting = false
 amount = 2000
 lifetime = 120.0
 explosiveness = 0.3

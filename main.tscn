@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dw1m668cm15v"]
+[gd_scene load_steps=6 format=3 uid="uid://dw1m668cm15v"]
 
+[ext_resource type="Script" path="res://main.gd" id="1_c4640"]
 [ext_resource type="Script" path="res://arc_2.gd" id="1_hkpmk"]
 [ext_resource type="Texture2D" uid="uid://caogm0aa0dtga" path="res://ARCnobg.png" id="2_fgwnx"]
 [ext_resource type="PackedScene" uid="uid://c8hdwtn31x55o" path="res://D8 nite.tscn" id="3_pcadv"]
@@ -8,6 +9,7 @@
 size = Vector2(81, 59)
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_c4640")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(608, 251)
