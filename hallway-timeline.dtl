@@ -1,4 +1,4 @@
-[background arg="res://schoolHallway.jpg" fade="0.0"]
+[background arg="res://hallway.jpg" fade="0.0"]
 join GamerScopecharacter (happy-default) center [animation="Fade In"]
 GamerScopecharacter: Hi there! I'm so glad you made it!
 GamerScopecharacter: I know it’s been hard for you to meet people, but tonight will be great!
