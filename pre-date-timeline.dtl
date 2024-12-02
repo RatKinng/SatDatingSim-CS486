@@ -20,10 +20,13 @@ ARC2character: Let’s start this movie night!!!
 GamerScopecharacter: What are we watching?
 AMPPScharacter: It’s Sharknado 3\: Oh Hell No!
 leave --All--
+[music fade="0.0" volume="0.0"]
+[music path="res://OMG Shark 2.mp3" channel="1" fade="0.0" volume="0.0" loop="false"]
 [background arg="res://movie1.png" fade="0.0"]
 [wait time="5.0"]
 [background arg="res://movie2.png" fade="0.0"]
 [wait time="5.0"]
 [background arg="res://movie3.png" fade="0.0"]
 [wait time="5.0"]
+[music path="res://good-night-lofi-cozy-chill-music-160166.mp3" fade="-0.5" volume="0.0"]
 jump after_movie_timeline/

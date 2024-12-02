@@ -1,3 +1,4 @@
+[music path="res://good-night-lofi-cozy-chill-music-160166.mp3" fade="0.0" volume="0.0"]
 [background arg="res://hallway.jpg" fade="0.0"]
 join GamerScopecharacter (happy-default) center [animation="Fade In"]
 GamerScopecharacter: Hi there! I'm so glad you made it!

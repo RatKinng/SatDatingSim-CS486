@@ -32,19 +32,22 @@ Do you want to walk one of them home?
 	leave ARC2character
 	update cpp-character center [move_time="0.5"]
 	cpp-character (ccp_blush): Of course you can walk me home, thank you!
-	jump ccp_date_timeline/
+	set {Date} = "CCP"
+	jump actual_date_timeline/
 - ARC2
 	leave cpp-character
 	leave AMPPScharacter
 	update ARC2character center [move_time="0.5"]
 	ARC2character (ar2sBlush): Oh! You want to walk me home? I’d be flattered!
-	jump arc2_date_timeline/
+	set {Date} = "ARC2"
+	jump actual_date_timeline/
 - AMPPS
 	leave ARC2character
 	leave cpp-character
 	update AMPPScharacter center [move_time="0.5"]
 	AMPPScharacter (blush): You want to walk me home? I.. guess you can
-	jump ampps_date_timeline/
+	set {Date} = "AMPPS"
+	jump actual_date_timeline/
 - No one
 	[end_timeline]
 [end_timeline]
