@@ -29,3 +29,4 @@ position = Vector2(7.5, -2.5)
 shape = SubResource("RectangleShape2D_ss2a5")
 
 [node name="Node2D" parent="." instance=ExtResource("3_pcadv")]
+position = Vector2(-72, -70)
