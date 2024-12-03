@@ -32,6 +32,7 @@ _surfaces = [{
 shader = ExtResource("4_x373n")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_itjgd"]
+size = Vector2(13.6439, 15.166)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cwrq0")
@@ -279,6 +280,8 @@ scale_amount_max = 15.0
 scale = Vector2(10, 10)
 
 [node name="particleCollide" type="CollisionShape2D" parent="spray_n_play/WindexHand/spray/spray_particle_area"]
+position = Vector2(-0.0215907, 0.399877)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_itjgd")
 script = ExtResource("10_qo814")
 
@@ -286,6 +289,6 @@ script = ExtResource("10_qo814")
 [connection signal="area_entered" from="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ul_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bl_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_um_particle_area_area_entered"]
+[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bm_particle_area_area_entered"]
