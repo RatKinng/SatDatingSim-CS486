@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 #	Turn off collision area because it is in by default and attached to the sprayer
