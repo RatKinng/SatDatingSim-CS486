@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=18 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="8_gc066"]
 [ext_resource type="Script" path="res://evil_windex_hand.gd" id="9_pt8y7"]
 [ext_resource type="Script" path="res://spray_particle_collide.gd" id="10_qo814"]
+[ext_resource type="AudioStream" uid="uid://ntrp05spjj0q" path="res://suspense-dramatic-248023.mp3" id="13_vgpt6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
 
@@ -286,10 +287,14 @@ position = Vector2(-0.0215907, 0.399877)
 shape = SubResource("RectangleShape2D_itjgd")
 script = ExtResource("10_qo814")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_vgpt6")
+autoplay = true
+
 [connection signal="area_entered" from="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_br_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ul_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bl_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_um_particle_area_area_entered"]
+[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bm_particle_area_area_entered"]

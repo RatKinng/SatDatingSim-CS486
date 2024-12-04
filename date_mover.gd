@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 	#get_node("BL_particle_spawner").emitting = true
 	#print(get_scale())
@@ -16,3 +16,5 @@ func _process(delta: float) -> void:
 
 func oof_owie_ouch(arg: bool) -> void:
 	visible = arg
+	
+	

@@ -8,7 +8,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var mouse_coords = get_global_mouse_position();
 	var movement_vector = Vector2(mouse_coords.x, mouse_coords.y);
 	transform = Transform2D(-45.0, Vector2(0.3, 0.3), 0.0, movement_vector);

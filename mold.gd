@@ -8,7 +8,7 @@ func _ready() -> void:
 
 #var done = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	#Dialogic.signal_event.connect(_date_ended)
 #
 	#if(done == false):
@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	#done = true
 
 
-func _on_particle_area_area_entered(area: Area2D) -> void:
+func _on_particle_area_area_entered(_area: Area2D) -> void:
 	#print($".")
 	#print($"BR_particle_area".name)
 	#if(area.name == "BR_particle_area"):
@@ -65,7 +65,7 @@ func reset(x_position: int, y_position: int) -> void:
 	var reset_vec = Vector2(x_position, y_position)
 	transform = Transform2D(0.0, reset_vec);
 
-func _on_spray_particle_area_area_entered(area: Area2D) -> void:
+func _on_spray_particle_area_area_entered(_area: Area2D) -> void:
 	#emitter.queue_free();
 	print($".")
 	pass
