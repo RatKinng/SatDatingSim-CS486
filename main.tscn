@@ -11,7 +11,7 @@ size = Vector2(81, 59)
 script = ExtResource("1_c4640")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(608, 251)
+position = Vector2(678.2, 321.8)
 
 [node name="ARC2" type="Area2D" parent="."]
 visible = false

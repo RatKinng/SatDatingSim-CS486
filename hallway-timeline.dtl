@@ -2,7 +2,6 @@
 [background arg="res://hallway.jpg" fade="0.0"]
 join GamerScopecharacter (happy-default) center [animation="Fade In"]
 GamerScopecharacter: Hi there! I'm so glad you made it!
-jump actual_date_timeline/
 GamerScopecharacter: I know it’s been hard for you to meet people, but tonight will be great!
 GamerScopecharacter: I have some friends from a Satellite lab and they’re having a movie night tonight.
 GamerScopecharacter: It’ll be a great opportunity for you to meet and hang out, and you won’t even have to talk very much.
