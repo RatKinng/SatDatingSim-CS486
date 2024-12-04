@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=19 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="8_gc066"]
 [ext_resource type="Script" path="res://evil_windex_hand.gd" id="9_pt8y7"]
 [ext_resource type="Script" path="res://spray_particle_collide.gd" id="10_qo814"]
+[ext_resource type="Script" path="res://spray_n_play.gd" id="10_sq2gp"]
+[ext_resource type="Script" path="res://spray_particle_area.gd" id="12_xkvj3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
 
@@ -258,6 +260,7 @@ scale = Vector2(0.2, 0.2)
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 
 [node name="spray_n_play" type="Node2D" parent="."]
+script = ExtResource("10_sq2gp")
 
 [node name="WindexHand" type="Sprite2D" parent="spray_n_play"]
 rotation = -0.846485
@@ -280,11 +283,14 @@ scale_amount_max = 15.0
 
 [node name="spray_particle_area" type="Area2D" parent="spray_n_play/WindexHand/spray"]
 scale = Vector2(10, 10)
+script = ExtResource("12_xkvj3")
 
 [node name="particleCollide" type="CollisionShape2D" parent="spray_n_play/WindexHand/spray/spray_particle_area"]
 position = Vector2(-0.0215907, 0.399877)
 shape = SubResource("RectangleShape2D_itjgd")
 script = ExtResource("10_qo814")
+
+[node name="Timer" type="Timer" parent="spray_n_play/WindexHand/spray/spray_particle_area"]
 
 [connection signal="area_shape_entered" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_shape_entered"]
 [connection signal="area_shape_exited" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_shape_exited"]

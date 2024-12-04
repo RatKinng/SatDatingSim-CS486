@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@export var RegionScene: PackedScene
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 #	Turn off collision area because it is in by default and attached to the sprayer
@@ -16,8 +18,19 @@ func _process(delta: float) -> void:
 	
 func _input(InputEvent) -> void:
 	if InputEvent is InputEventMouseButton and InputEvent.pressed:
-		# Spray out some particles
+		## Spray out some particles
 		$spray.emitting = true;
-		# Turn on the collision area
-		get_node("spray/spray_particle_area/particleCollide").set_deferred("disabled", false);
-	#get_node("spray/spray_particle_area/particleCollide").set_deferred("disabled", true);
+		## Create the collision region
+		#spray()
+#
+		#
+		## Turn on the collision area
+		##get_node("spray/spray_particle_area/particleCollide").set_deferred("disabled", false);
+	##if InputEvent is InputEventMouseMotion:
+		##get_node("spray/spray_particle_area/particleCollide").set_deferred("disabled", true);
+#func spray() -> void:
+	#if not RegionScene:
+		#return
+	#var spray_region = RegionScene.instantiate()
+	#spray_region.global_position = get_global_mouse_position()
+	#get_tree().current_scene.add_child(spray_region)
