@@ -25,16 +25,17 @@ func _process(delta: float) -> void:
 	var x_movement;
 	var y_movement;
 	var movement = abs(y_to_parent / x_to_parent);		# Should be a direct path to the collision area
+	var move_const = 4.0;
 
 	if(mold_x < 0):
-		x_movement = mold_x + (1 - movement);
+		x_movement = mold_x + move_const*(1 - movement);
 	else:
-		x_movement = mold_x - (1 - movement);
+		x_movement = mold_x - move_const*(1 - movement);
 		
 	if(mold_y < 0):
-		y_movement = mold_y + movement;
+		y_movement = mold_y + move_const*movement;
 	else:
-		y_movement = mold_y - movement;
+		y_movement = mold_y - move_const*movement;
 
 	
 #	Create the attack pattern
