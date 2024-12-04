@@ -86,7 +86,7 @@ scale_amount_min = 0.07
 scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
-[node name="BR_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BR_particle_spawner"]
+[node name="BR_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BR_particle_spawner" groups=["evil_particles"]]
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area"]
 visible = false
@@ -286,10 +286,11 @@ position = Vector2(-0.0215907, 0.399877)
 shape = SubResource("RectangleShape2D_itjgd")
 script = ExtResource("10_qo814")
 
+[connection signal="area_shape_entered" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_shape_entered"]
+[connection signal="area_shape_exited" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_shape_exited"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_br_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ul_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bl_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_um_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bm_particle_area_area_entered"]

@@ -74,6 +74,10 @@ version_control/plugin_name="GitPlugin"
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+evil_particles=""
+
 [input]
 
 dialogic_default_action={

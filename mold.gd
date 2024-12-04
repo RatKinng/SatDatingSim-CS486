@@ -41,12 +41,6 @@ func _process(delta: float) -> void:
 #	Create the attack pattern
 	var attack_vec = Vector2(x_movement, y_movement)
 	
-	
-	
-	
-	
-	
-	
 	if(mold_y != 0) or (mold_x != 0):
 		transform = Transform2D(0.0, attack_vec);
 
@@ -69,3 +63,15 @@ func _on_spray_particle_area_area_entered(area: Area2D) -> void:
 	#emitter.queue_free();
 	print($".")
 	pass
+
+# What the date needs to do if it gets shocked
+func _on_area_2d_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if(area.name != "spray_particle_area"):
+		# Turn on the pain shader
+		get_node("../../../Area2D/OuchieShader").oof_owie_ouch(true);
+
+
+func _on_area_2d_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	if(area.name != "spray_particle_area"):
+		# Turn on the pain shader
+		get_node("../../../Area2D/OuchieShader").oof_owie_ouch(false);
