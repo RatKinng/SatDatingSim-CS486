@@ -13,3 +13,6 @@ func _process(delta: float) -> void:
 	#get_node("BL_particle_spawner").emitting = true
 	#print(get_scale())
 	#transform = Transform2D(0.0, Vector2(0.16, 0.16), 0.0, Vector2(get_position().x + 0.1, get_position().y + 0.1));
+
+func oof_owie_ouch(arg: bool) -> void:
+	visible = arg
