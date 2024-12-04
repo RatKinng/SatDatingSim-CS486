@@ -24,18 +24,18 @@ func _process(delta: float) -> void:
 	var mold_x = get_position().x;						 # X coordinate of the electrostatic instance
 	var x_movement;
 	var y_movement;
+	var movement_constant = 4.0;
 	var movement = abs(y_to_parent / x_to_parent);		# Should be a direct path to the collision area
-	var move_const = 4.0;
 
 	if(mold_x < 0):
-		x_movement = mold_x + move_const*(1 - movement);
+		x_movement = mold_x + movement_constant*(1 - movement);
 	else:
-		x_movement = mold_x - move_const*(1 - movement);
+		x_movement = mold_x - movement_constant*(1 - movement);
 		
 	if(mold_y < 0):
-		y_movement = mold_y + move_const*movement;
+		y_movement = mold_y + movement_constant*movement;
 	else:
-		y_movement = mold_y - move_const*movement;
+		y_movement = mold_y - movement_constant*movement;
 
 	
 #	Create the attack pattern
