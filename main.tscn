@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dw1m668cm15v"]
+[gd_scene load_steps=5 format=3 uid="uid://dw1m668cm15v"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c4640"]
 [ext_resource type="Script" path="res://arc_2.gd" id="1_hkpmk"]
 [ext_resource type="Texture2D" uid="uid://caogm0aa0dtga" path="res://ARCnobg.png" id="2_fgwnx"]
-[ext_resource type="PackedScene" uid="uid://c8hdwtn31x55o" path="res://D8 nite.tscn" id="3_pcadv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ss2a5"]
 size = Vector2(81, 59)
@@ -27,5 +26,3 @@ texture = ExtResource("2_fgwnx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ARC2"]
 position = Vector2(7.5, -2.5)
 shape = SubResource("RectangleShape2D_ss2a5")
-
-[node name="Node2D" parent="." instance=ExtResource("3_pcadv")]

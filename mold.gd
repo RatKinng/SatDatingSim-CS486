@@ -39,6 +39,13 @@ func _process(delta: float) -> void:
 	
 #	Create the attack pattern
 	var attack_vec = Vector2(x_movement, y_movement)
+	
+	
+	
+	
+	
+	
+	
 	if(mold_y != 0) or (mold_x != 0):
 		transform = Transform2D(0.0, attack_vec);
 
