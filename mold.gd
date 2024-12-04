@@ -24,17 +24,18 @@ func _process(delta: float) -> void:
 	var mold_x = get_position().x;						 # X coordinate of the electrostatic instance
 	var x_movement;
 	var y_movement;
+	var movement_constant = 4.0;
 	var movement = abs(y_to_parent / x_to_parent);		# Should be a direct path to the collision area
 
 	if(mold_x < 0):
-		x_movement = mold_x + (1 - movement);
+		x_movement = mold_x + movement_constant*(1 - movement);
 	else:
-		x_movement = mold_x - (1 - movement);
+		x_movement = mold_x - movement_constant*(1 - movement);
 		
 	if(mold_y < 0):
-		y_movement = mold_y + movement;
+		y_movement = mold_y + movement_constant*movement;
 	else:
-		y_movement = mold_y - movement;
+		y_movement = mold_y - movement_constant*movement;
 
 	
 #	Create the attack pattern
@@ -60,6 +61,9 @@ func _on_particle_area_area_entered(area: Area2D) -> void:
 	#queue_free();
 	pass
 
+func reset(x_position: int, y_position: int) -> void:
+	var reset_vec = Vector2(x_position, y_position)
+	transform = Transform2D(0.0, reset_vec);
 
 func _on_spray_particle_area_area_entered(area: Area2D) -> void:
 	#emitter.queue_free();

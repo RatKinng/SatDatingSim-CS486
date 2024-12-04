@@ -1,12 +1,12 @@
 shader_type canvas_item;
 
 void vertex() {
-	float redLevel = sin(TIME);
-	COLOR = vec4(redLevel,0,0,redLevel);
+	//float redLevel = sin(TIME);
+	//COLOR = vec4(redLevel,0,0,redLevel);
 }
 
 void fragment() {
-	float redLevel = sin(TIME * 2.0);
+	float redLevel = sin(TIME * 5.0);
 	COLOR = vec4(redLevel,0,0,(redLevel/2.0));
 }
 
