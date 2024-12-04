@@ -260,7 +260,6 @@ scale = Vector2(0.2, 0.2)
 [node name="spray_n_play" type="Node2D" parent="."]
 
 [node name="WindexHand" type="Sprite2D" parent="spray_n_play"]
-position = Vector2(1157, 399)
 rotation = -0.846485
 scale = Vector2(0.4, 0.353)
 texture = ExtResource("8_gc066")
