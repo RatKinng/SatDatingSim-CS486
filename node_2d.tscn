@@ -1,0 +1,144 @@
+[gd_scene load_steps=6 format=3 uid="uid://dtncrx68hynsp"]
+
+[ext_resource type="Texture2D" uid="uid://c3p76ymtssgno" path="res://lawler.png" id="1_c5tup"]
+[ext_resource type="AudioStream" uid="uid://b26a4x6trx0h4" path="res://ascending-jumpscare-102061.mp3" id="2_rocpi"]
+
+[sub_resource type="Animation" id="Animation_7knu0"]
+resource_name = "jump_scare"
+length = 0.4
+step = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.211592, -0.25, 0, 0.25, 0, 0.381437, -0.25, 0, 0.25, 0, 0.714696, -0.25, 0, 0.25, 0, 0.387555, -0.25, 0, 0.25, 0, 0.204752, -0.25, 0, 0.25, 0, 0.0132639, -0.25, 0, 0.25, 0, -0.201196, -0.25, 0, 0.25, 0, -0.565373, -0.25, 0, 0.25, 0, -0.565373, -0.25, 0, 0.25, 0, -0.201196, -0.25, 0, 0.25, 0, 0.0132639, -0.25, 0, 0.25, 0, 0.204752, -0.25, 0, 0.25, 0, 0.387555, -0.25, 0, 0.25, 0, 0.714696, -0.25, 0, 0.25, 0, 0.381437, -0.25, 0, 0.25, 0, 0.211592, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.01909, 0.0410795, 0.0616298, 0.0784962, 0.0996453, 0.119713, 0.140472, 0.160922, 0.181194, 0.199043, 0.219597, 0.240691, 0.260704, 0.280716, 0.300729, 0.321282, 0.341835)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.07633, -0.25, 0, 0.25, 0, 1.13031, -0.25, 0, 0.25, 0, 1.60642, -0.25, 0, 0.25, 0, 1.6882, -0.25, 0, 0.25, 0, 1.96691, -0.25, 0, 0.25, 0, 2.2136, -0.25, 0, 0.25, 0, 2.67413, -0.25, 0, 0.25, 0, 3.33947, -0.25, 0, 0.25, 0, 3.33947, -0.25, 0, 0.25, 0, 2.67413, -0.25, 0, 0.25, 0, 2.2136, -0.25, 0, 0.25, 0, 1.96691, -0.25, 0, 0.25, 0, 1.6882, -0.25, 0, 0.25, 0, 1.60642, -0.25, 0, 0.25, 0, 1.13031, -0.25, 0, 0.25, 0, 1.07633, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.01909, 0.0410795, 0.0616298, 0.0784962, 0.0996453, 0.119713, 0.140472, 0.160922, 0.181194, 0.199043, 0.219597, 0.240691, 0.260704, 0.280716, 0.300729, 0.321282, 0.341835)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:scale:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.09646, -0.25, 0, 0.25, 0, 1.1817, -0.25, 0, 0.25, 0, 1.3594, -0.25, 0, 0.25, 0, 1.53533, -0.25, 0, 0.25, 0, 1.67872, -0.25, 0, 0.25, 0, 1.85221, -0.25, 0, 0.25, 0, 2.06189, -0.25, 0, 0.25, 0, 2.59267, -0.25, 0, 0.25, 0, 2.59267, -0.25, 0, 0.25, 0, 2.06189, -0.25, 0, 0.25, 0, 1.85221, -0.25, 0, 0.25, 0, 1.67872, -0.25, 0, 0.25, 0, 1.53533, -0.25, 0, 0.25, 0, 1.3594, -0.25, 0, 0.25, 0, 1.1817, -0.25, 0, 0.25, 0, 1.09646, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.01909, 0.0410795, 0.0616298, 0.0784962, 0.0996453, 0.119713, 0.140472, 0.160922, 0.181194, 0.199043, 0.219597, 0.240691, 0.260704, 0.280716, 0.300729, 0.321282, 0.341835)
+}
+
+[sub_resource type="Animation" id="Animation_cynfq"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.00123319, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.34088, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1.14824, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n3q77"]
+_data = {
+"RESET": SubResource("Animation_cynfq"),
+"jump_scare": SubResource("Animation_7knu0")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 0.00123319
+scale = Vector2(1.34088, 1.14824)
+texture = ExtResource("1_c5tup")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_n3q77")
+}
+autoplay = "jump_scare"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Sprite2D"]
+stream = ExtResource("2_rocpi")
