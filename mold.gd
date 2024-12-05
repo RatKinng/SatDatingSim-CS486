@@ -4,8 +4,10 @@ extends CPUParticles2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Create the minigame timer
+	#await get_tree().create_timer(10.0).timeout;
 	pass
-
+	
 #var done = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -79,3 +81,7 @@ func _on_lose_area_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
 	get_node("../../../Area2D/OuchieShader").oof_owie_ouch(false); # Turn off the shader if static leaves
+
+func _on_timer_timeout():
+	# You defended your date! You win the game!
+	queue_free();

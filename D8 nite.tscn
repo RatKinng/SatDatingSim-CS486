@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=18 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="8_gc066"]
 [ext_resource type="Script" path="res://evil_windex_hand.gd" id="9_pt8y7"]
 [ext_resource type="Script" path="res://spray_particle_collide.gd" id="10_qo814"]
+[ext_resource type="Script" path="res://minigame_timer.gd" id="13_rge7x"]
 [ext_resource type="AudioStream" uid="uid://ntrp05spjj0q" path="res://suspense-dramatic-248023.mp3" id="13_vgpt6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
@@ -317,6 +318,9 @@ script = ExtResource("10_qo814")
 stream = ExtResource("13_vgpt6")
 autoplay = true
 
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource("13_rge7x")
+
 [connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_area_2d_area_entered"]
@@ -341,3 +345,9 @@ autoplay = true
 [connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_lose_area_area_entered"]
 [connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_lose_area_area_entered"]
 [connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_timer_timeout"]
