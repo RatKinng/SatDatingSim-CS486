@@ -1,0 +1,6 @@
+[background arg="res://cleanroom_outside.jpg" fade="0.0"]
+[music path="res://awards-background-music-nomination-ceremony-champion-winner-249655.mp3" fade="0.0" volume="0.0"]
+You did it! You defended the satellite!
+join AMPPScharacter center [animation="Instant In" length="0.0"]
+AMPPScharacter: You saved me! Thank you!
+Your friendship level with AMPPS is now 1 (one)!!
