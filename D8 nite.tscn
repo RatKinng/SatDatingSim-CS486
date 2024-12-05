@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=19 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://mold.gd" id="2_rhhuq"]
 [ext_resource type="Shader" path="res://oof_owie_ouch.gdshader" id="4_x373n"]
 [ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="8_gc066"]
+[ext_resource type="Script" path="res://lose_area_shutoff.gd" id="9_3x73p"]
 [ext_resource type="Script" path="res://evil_windex_hand.gd" id="9_pt8y7"]
 [ext_resource type="Script" path="res://spray_particle_collide.gd" id="10_qo814"]
 [ext_resource type="Script" path="res://minigame_timer.gd" id="13_rge7x"]
@@ -272,6 +273,7 @@ script = ExtResource("2_dpnwe")
 [node name="LoseArea" type="Area2D" parent="Area2D"]
 collision_layer = 2
 collision_mask = 2
+script = ExtResource("9_3x73p")
 
 [node name="LoseAreaCollider" type="CollisionShape2D" parent="Area2D/LoseArea"]
 position = Vector2(315, -121)
@@ -352,3 +354,4 @@ script = ExtResource("13_rge7x")
 [connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/LoseArea" method="_on_timer_timeout"]

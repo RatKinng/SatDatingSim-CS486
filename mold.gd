@@ -3,6 +3,7 @@ extends CPUParticles2D
 #var your_date = get_parent()
 var movement_constant = 4.0;
 var allDone = false;
+var alreadyWon = false;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Create the minigame timer
@@ -12,6 +13,8 @@ func _ready() -> void:
 #var done = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if(allDone == true):
+		movement_constant = 0.0;
 	#Dialogic.signal_event.connect(_date_ended)
 #
 	#if(done == false):
@@ -68,7 +71,14 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func _on_lose_area_area_entered(area: Area2D) -> void:
 	# The static gets to the lose area, and you lose the game!
-	print("Loser!") # placeholder
+	var LAW = preload("res://node_2d.tscn")
+	if(allDone == true):
+		queue_free();
+		return
+	#remove_child($Area2D)
+	#remove_child($CleanroomOutside)
+	#var law = LAW.instantiate()
+	#add_child(law)
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
@@ -77,6 +87,8 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _on_timer_timeout():
 	# You defended your date! You win the game!
-	var dialog = Dialogic.start("winner_timeline")
-	add_child(dialog)
-	allDone = true;
+	if(alreadyWon ==  false):
+		var dialog = Dialogic.start("winner_timeline")
+		add_child(dialog)
+		allDone = true;
+		alreadyWon = true;
