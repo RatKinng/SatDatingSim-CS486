@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://bqkxgh3fv00gv" path="res://lightningbolt.png" id="2_ko4x7"]
 [ext_resource type="Script" path="res://mold.gd" id="2_rhhuq"]
 [ext_resource type="Shader" path="res://oof_owie_ouch.gdshader" id="4_x373n"]
-[ext_resource type="Script" path="res://your_date.gd" id="6_d1q4v"]
 [ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="8_gc066"]
 [ext_resource type="Script" path="res://evil_windex_hand.gd" id="9_pt8y7"]
 [ext_resource type="Script" path="res://spray_particle_collide.gd" id="10_qo814"]
+[ext_resource type="Script" path="res://minigame_timer.gd" id="13_rge7x"]
 [ext_resource type="AudioStream" uid="uid://ntrp05spjj0q" path="res://suspense-dramatic-248023.mp3" id="13_vgpt6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
@@ -67,16 +67,16 @@ script = ExtResource("2_dpnwe")
 
 [node name="AmppsBetter" type="Sprite2D" parent="Area2D/AmppsBetter"]
 texture = ExtResource("1_f2fy1")
-script = ExtResource("6_d1q4v")
 
 [node name="BR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(5400, 3000)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -88,6 +88,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="BR_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BR_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area"]
 visible = false
@@ -101,11 +103,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(5400, -3200)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -117,6 +120,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="UR_particle_area" type="Area2D" parent="Area2D/AmppsBetter/UR_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area"]
 visible = false
@@ -130,11 +135,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-5300, -3200)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -146,6 +152,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="UL_particle_area" type="Area2D" parent="Area2D/AmppsBetter/UL_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area"]
 visible = false
@@ -159,11 +167,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="BL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-5300, 3000)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -175,6 +184,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="BL_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BL_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area"]
 visible = false
@@ -188,11 +199,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UM_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(0, -3100)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -204,6 +216,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="UM_particle_area" type="Area2D" parent="Area2D/AmppsBetter/UM_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area"]
 visible = false
@@ -217,11 +231,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="BM_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(0, 3100)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -233,6 +248,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="BM_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BM_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area"]
 visible = false
@@ -252,6 +269,14 @@ mesh = SubResource("ArrayMesh_vy4fd")
 texture = ExtResource("1_f2fy1")
 script = ExtResource("2_dpnwe")
 
+[node name="LoseArea" type="Area2D" parent="Area2D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="LoseAreaCollider" type="CollisionShape2D" parent="Area2D/LoseArea"]
+position = Vector2(315, -121)
+shape = SubResource("CircleShape2D_kq3sh")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(678.2, 321.8)
 scale = Vector2(0.2, 0.2)
@@ -269,7 +294,7 @@ script = ExtResource("9_pt8y7")
 [node name="spray" type="CPUParticles2D" parent="spray_n_play/WindexHand"]
 position = Vector2(51.0404, -387.804)
 emitting = false
-amount = 10
+amount = 30
 one_shot = true
 explosiveness = 0.8
 randomness = 0.5
@@ -281,6 +306,8 @@ scale_amount_max = 15.0
 
 [node name="spray_particle_area" type="Area2D" parent="spray_n_play/WindexHand/spray"]
 scale = Vector2(10, 10)
+collision_layer = 4
+collision_mask = 4
 
 [node name="particleCollide" type="CollisionShape2D" parent="spray_n_play/WindexHand/spray/spray_particle_area"]
 position = Vector2(-0.0215907, 0.399877)
@@ -291,10 +318,36 @@ script = ExtResource("10_qo814")
 stream = ExtResource("13_vgpt6")
 autoplay = true
 
+[node name="Timer" type="Timer" parent="."]
+script = ExtResource("13_rge7x")
+
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_br_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ul_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bl_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_um_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bm_particle_area_area_entered"]
+[connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_lose_area_area_entered"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_timer_timeout"]
