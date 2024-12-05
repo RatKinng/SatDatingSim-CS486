@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=15 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
@@ -9,9 +9,7 @@
 [ext_resource type="Script" path="res://mold.gd" id="2_rhhuq"]
 [ext_resource type="Shader" path="res://oof_owie_ouch.gdshader" id="4_x373n"]
 [ext_resource type="Script" path="res://your_date.gd" id="6_d1q4v"]
-[ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="8_gc066"]
-[ext_resource type="Script" path="res://evil_windex_hand.gd" id="9_pt8y7"]
-[ext_resource type="Script" path="res://spray_particle_collide.gd" id="10_qo814"]
+[ext_resource type="PackedScene" uid="uid://v2vcmbtryai0" path="res://just_collision.tscn" id="11_3xcbg"]
 [ext_resource type="AudioStream" uid="uid://ntrp05spjj0q" path="res://suspense-dramatic-248023.mp3" id="13_vgpt6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
@@ -33,9 +31,6 @@ _surfaces = [{
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_pieqm"]
 shader = ExtResource("4_x373n")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_itjgd"]
-size = Vector2(13.6439, 15.166)
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_cwrq0")
 
@@ -46,6 +41,8 @@ texture = ExtResource("1_xyty0")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(360, 440)
+collision_layer = 3
+collision_mask = 3
 
 [node name="LoseCollider" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(315, -121)
@@ -88,6 +85,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="BR_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BR_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area"]
 visible = false
@@ -258,43 +257,8 @@ scale = Vector2(0.2, 0.2)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 
-[node name="spray_n_play" type="Node2D" parent="."]
-
-[node name="WindexHand" type="Sprite2D" parent="spray_n_play"]
-rotation = -0.846485
-scale = Vector2(0.4, 0.353)
-texture = ExtResource("8_gc066")
-script = ExtResource("9_pt8y7")
-
-[node name="spray" type="CPUParticles2D" parent="spray_n_play/WindexHand"]
-position = Vector2(51.0404, -387.804)
-emitting = false
-amount = 10
-one_shot = true
-explosiveness = 0.8
-randomness = 0.5
-emission_shape = 1
-emission_sphere_radius = 128.0
-gravity = Vector2(0, 0)
-scale_amount_min = 10.0
-scale_amount_max = 15.0
-
-[node name="spray_particle_area" type="Area2D" parent="spray_n_play/WindexHand/spray"]
-scale = Vector2(10, 10)
-
-[node name="particleCollide" type="CollisionShape2D" parent="spray_n_play/WindexHand/spray/spray_particle_area"]
-position = Vector2(-0.0215907, 0.399877)
-shape = SubResource("RectangleShape2D_itjgd")
-script = ExtResource("10_qo814")
-
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_vgpt6")
 autoplay = true
 
-[connection signal="area_entered" from="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_br_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ul_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bl_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_um_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bm_particle_area_area_entered"]
+[node name="JustCollision" parent="." instance=ExtResource("11_3xcbg")]

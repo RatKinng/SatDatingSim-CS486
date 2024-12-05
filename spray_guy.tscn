@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxb6n4vugvvs1"]
+
+[ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="1_u37i2"]
+[ext_resource type="Script" path="res://evil_windex_hand.gd" id="2_kde3k"]
+[ext_resource type="Script" path="res://spray_particle_collide.gd" id="3_gcn7w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aci2x"]
+size = Vector2(13.6439, 15.166)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="spray_n_play" type="Node2D" parent="."]
+
+[node name="WindexHand" type="Sprite2D" parent="spray_n_play"]
+rotation = -0.846485
+scale = Vector2(0.4, 0.353)
+texture = ExtResource("1_u37i2")
+script = ExtResource("2_kde3k")
+
+[node name="spray" type="CPUParticles2D" parent="spray_n_play/WindexHand"]
+position = Vector2(51.0404, -387.804)
+emitting = false
+amount = 10
+one_shot = true
+explosiveness = 0.8
+randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 128.0
+gravity = Vector2(0, 0)
+scale_amount_min = 10.0
+scale_amount_max = 15.0
+
+[node name="spray_particle_area" type="Area2D" parent="spray_n_play/WindexHand/spray"]
+scale = Vector2(10, 10)
+
+[node name="particleCollide" type="CollisionShape2D" parent="spray_n_play/WindexHand/spray/spray_particle_area"]
+position = Vector2(-0.0215907, 0.399877)
+shape = SubResource("RectangleShape2D_aci2x")
+script = ExtResource("3_gcn7w")

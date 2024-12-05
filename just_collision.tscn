@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://v2vcmbtryai0"]
+
+[ext_resource type="Script" path="res://just_collision.gd" id="1_spnym"]
+[ext_resource type="Texture2D" uid="uid://ba5d84r4e034b" path="res://windexHand.png" id="2_bn5jg"]
+[ext_resource type="Script" path="res://evil_windex_hand.gd" id="3_t77gf"]
+
+[node name="JustCollision" type="Node2D"]
+script = ExtResource("1_spnym")
+
+[node name="WindexHand" type="Sprite2D" parent="."]
+rotation = -0.846485
+scale = Vector2(0.4, 0.353)
+texture = ExtResource("2_bn5jg")
+script = ExtResource("3_t77gf")
