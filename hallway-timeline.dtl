@@ -11,5 +11,5 @@ Are you ready?
 	GamerScopecharacter: Wonderful!! Let's go!
 - No
 	GamerScopecharacter (sad-ish): O-Oh... Okay.... My friends were really excited to see you but I guess if it's too much....
-	[end_timeline]
+	jump no_lab_timeline/
 jump pre-date-timeline/

@@ -25,13 +25,19 @@ directories/dch_directory={
 "AMPPScharacter": "res://AMPPScharacter.dch",
 "ARC2character": "res://ARC2character.dch",
 "GamerScopecharacter": "res://GamerScopecharacter.dch",
-"cpp-character": "res://cpp-character.dch"
+"arc_1_character": "res://arc_1_character.dch",
+"cpp-character": "res://cpp-character.dch",
+"santa_character": "res://santa_character.dch"
 }
 directories/dtl_directory={
 "actual_date_timeline": "res://actual_date_timeline.dtl",
 "after_movie_timeline": "res://after_movie_timeline.dtl",
 "hallway-timeline": "res://hallway-timeline.dtl",
-"pre-date-timeline": "res://pre-date-timeline.dtl"
+"hate_sharknado_timeline": "res://hate_sharknado_timeline.dtl",
+"lonely_walk_home_timeline": "res://lonely_walk_home_timeline.dtl",
+"no_lab_timeline": "res://no_lab_timeline.dtl",
+"pre-date-timeline": "res://pre-date-timeline.dtl",
+"pre_mini_game_timeline": "res://pre_mini_game_timeline.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]

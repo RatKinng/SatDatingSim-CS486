@@ -1,0 +1,12 @@
+[sound path="res://metal-pipe-falling-sound-effect-made-with-Voicemod.mp3" volume="6.0"]
+[wait time="1.0"]
+[sound path="res://metal-pipe-falling-sound-effect-made-with-Voicemod.mp3" volume="6.0"]
+[wait time="1.0"]
+[sound path="res://metal-pipe-falling-sound-effect-made-with-Voicemod.mp3" volume="6.0"]
+[wait time="1.0"]
+arc_1_character: TAKE THAT YOU DIRTY CHEATER!!!
+What's going on!?!?!
+Oh no!!!
+It looks like theres Electro-Static Discharge heading straight for your "date"!!!
+Grab your trusty Evil Windex (tm) and protect them!
+[signal arg="date_end"]

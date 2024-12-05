@@ -1,0 +1,7 @@
+leave GamerScopecharacter
+[background arg="res://exahauler sad.png" fade="0.0"]
+[music path="res://246371-5c6872b4-c4fe-44cb-b8d7-54b118fb5b26.mp3" fade="0.0" volume="0.0"]
+Oh no!
+You squandered your chance at friends and romance!
+How sad.
+[end_timeline]

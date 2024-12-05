@@ -1,0 +1,19 @@
+[background arg="res://beautiful-green-forest-summer-countryside-road-path-way-lane-pathway-sunny-day-spring-101752204-1790602968.jpg" fade="0.0"]
+[music path="res://sneaky-mystery-loop-mysterious-orchestral-270710.mp3" fade="0.0" volume="0.0"]
+Well, you're going home, having made a few new friends, but nothing more.
+Today was ok, the future is bright now that you have left your nasty bedroom
+arc_1_character: Well well well~~~~ Look what we have here
+join arc_1_character center
+arc_1_character: What are you doing all the way out here on your own? 
+arc_1_character: A pretty thing like you should be safe and sound~~
+- Who are you?
+	arc_1_character: Who me? You met my baby brother earlier today
+	arc_1_character: I'm ARC1!
+- How flattering
+	arc_1_character: I sure hope so!
+- Fuck off and die
+	arc_1_character: Awwww!
+arc_1_character: How about I walk you home?
+I....
+arc_1_character: Don't worry, I already know where I'm going!
+[end_timeline]

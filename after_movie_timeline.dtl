@@ -15,7 +15,8 @@ ARC2character: How’d you like it, {Name}?
 - No
 	That… was the worst thing I’ve ever watched…
 	AMPPScharacter: … I didn’t know you were like that….
-	[end_timeline]
+	leave --All--
+	jump hate_sharknado_timeline/
 cpp-character: Well, it seems like Gamer Scope is out for the count
 leave --All--
 join GamerScopecharacter (off) center
@@ -49,5 +50,6 @@ Do you want to walk one of them home?
 	set {Date} = "AMPPS"
 	jump actual_date_timeline/
 - No one
-	[end_timeline]
+	leave --All--
+	jump lonely_walk_home_timeline/
 [end_timeline]
