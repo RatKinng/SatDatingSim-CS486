@@ -121,6 +121,7 @@ _data = {
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(572, 353)
 texture = ExtResource("1_c5tup")
+offset = Vector2(630, 250)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
 libraries = {
