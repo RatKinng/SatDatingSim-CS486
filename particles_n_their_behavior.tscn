@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cm7ja"]
 size = Vector2(13.6439, 15.166)
 
-[node name="Node2D" type="Node2D"]
+[node name="Particle" type="Node2D"]
 script = ExtResource("1_1aikn")
 
 [node name="spray" type="CPUParticles2D" parent="."]

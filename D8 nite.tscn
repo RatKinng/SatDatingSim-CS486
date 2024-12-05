@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c8hdwtn31x55o"]
+[gd_scene load_steps=16 format=4 uid="uid://c8hdwtn31x55o"]
 
 [ext_resource type="Script" path="res://d_8_nite.gd" id="1_cwrq0"]
 [ext_resource type="Texture2D" uid="uid://14vxi5jml1c6" path="res://ampps_better.png" id="1_f2fy1"]
@@ -10,6 +10,7 @@
 [ext_resource type="Shader" path="res://oof_owie_ouch.gdshader" id="4_x373n"]
 [ext_resource type="Script" path="res://your_date.gd" id="6_d1q4v"]
 [ext_resource type="PackedScene" uid="uid://v2vcmbtryai0" path="res://just_collision.tscn" id="11_3xcbg"]
+[ext_resource type="PackedScene" uid="uid://dn1v8quvcr70q" path="res://particles_n_their_behavior.tscn" id="12_xdimw"]
 [ext_resource type="AudioStream" uid="uid://ntrp05spjj0q" path="res://suspense-dramatic-248023.mp3" id="13_vgpt6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kq3sh"]
@@ -116,6 +117,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="UR_particle_area" type="Area2D" parent="Area2D/AmppsBetter/UR_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area"]
 visible = false
@@ -145,6 +148,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="UL_particle_area" type="Area2D" parent="Area2D/AmppsBetter/UL_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area"]
 visible = false
@@ -174,6 +179,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="BL_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BL_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area"]
 visible = false
@@ -203,6 +210,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="UM_particle_area" type="Area2D" parent="Area2D/AmppsBetter/UM_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area"]
 visible = false
@@ -232,6 +241,8 @@ scale_amount_max = 0.1
 script = ExtResource("2_rhhuq")
 
 [node name="BM_particle_area" type="Area2D" parent="Area2D/AmppsBetter/BM_particle_spawner"]
+collision_layer = 7
+collision_mask = 7
 
 [node name="Lightningbolt" type="Sprite2D" parent="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area"]
 visible = false
@@ -262,3 +273,7 @@ stream = ExtResource("13_vgpt6")
 autoplay = true
 
 [node name="JustCollision" parent="." instance=ExtResource("11_3xcbg")]
+
+[node name="ParticlesAndBehavior" parent="." instance=ExtResource("12_xdimw")]
+
+[connection signal="area_entered" from="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area" to="ParticlesAndBehavior" method="_on_br_particle_area_area_entered"]
