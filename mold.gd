@@ -52,6 +52,7 @@ func _process(_delta: float) -> void:
 
 func reset(x_position: int, y_position: int) -> void:
 	if(allDone == true):
+		# If you survived, clear the particles
 		queue_free();
 	var reset_vec = Vector2(x_position, y_position)
 	transform = Transform2D(0.0, reset_vec);
