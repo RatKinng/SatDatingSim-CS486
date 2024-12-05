@@ -8,3 +8,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
+
+
+func _on_lose_area_area_entered(area: Area2D) -> void:
+	# put the lose condition here!!
+	pass # Replace with function body.
