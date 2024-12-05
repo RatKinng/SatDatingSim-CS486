@@ -22,6 +22,8 @@ func _input(InputEvent) -> void:
 		
 	if InputEvent is InputEventMouseButton and InputEvent.pressed:
 		# Spray out some particles
+		if($spray.emitting == true):
+			return
 		$spray.emitting = true;
 		#add_child(particleCreator)
 		# Turn on the collision area
