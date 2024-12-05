@@ -1,26 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dw1m668cm15v"]
+[gd_scene load_steps=2 format=3 uid="uid://dw1m668cm15v"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_c4640"]
-[ext_resource type="Texture2D" uid="uid://caogm0aa0dtga" path="res://ARCnobg.png" id="2_fgwnx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ss2a5"]
-size = Vector2(81, 59)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_c4640")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(678.2, 321.8)
-
-[node name="ARC2" type="Area2D" parent="."]
-visible = false
-position = Vector2(481, 84)
-
-[node name="ArCnobg" type="Sprite2D" parent="ARC2"]
-position = Vector2(2.99997, -13)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_fgwnx")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ARC2"]
-position = Vector2(7.5, -2.5)
-shape = SubResource("RectangleShape2D_ss2a5")
