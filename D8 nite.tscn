@@ -294,7 +294,7 @@ script = ExtResource("9_pt8y7")
 [node name="spray" type="CPUParticles2D" parent="spray_n_play/WindexHand"]
 position = Vector2(51.0404, -387.804)
 emitting = false
-amount = 10
+amount = 30
 one_shot = true
 explosiveness = 0.8
 randomness = 0.5
