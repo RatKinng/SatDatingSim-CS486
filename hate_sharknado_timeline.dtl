@@ -1,0 +1,19 @@
+leave GamerScopecharacter
+[background arg="res://snowy-pathway-david-lichtneker-2958675049.jpg" fade="0.0"]
+You didn't like Sharknado 3, how can you deal with yourself?
+You'll have to drop of out college. There's no other options. The shame is too great
+Whatever will you do now that you wont be able to get a high paying job with your business degree?
+[music path="res://christmas-winter-whimsy-264703.mp3" fade="0.0" volume="0.0"]
+You hear... Christmas music?
+join santa_character center
+santa_character: HO HO Hello!
+santa_character: I couldn't help but notice how sad and desperate you seemed, and during christmas time!
+santa_character: I would like to offer you a job, what do you say?
+- Yes!
+	Oh please! I need a job now that I have to drop out of my business degree!
+- What the fuck?
+	What kind of job? I'm not a damn elf
+	santa_character: How rude, I'd never relenquish someone such as you to the life of a sla-ELF. Of an elf.
+santa_character: Well, now that you work for me....
+santa_character: SHOW ME YOUR FEET
+[end_timeline]

@@ -5,4 +5,4 @@ elif {Date} == "CCP":
 	ARC2character (ar2sBlush): Well, this is me, thank you again! Have a great night.
 elif {Date} == "ARC2":
 	cpp-character (ccp_blush): Well, this is me, thank you again! Have a great night.
-[signal arg="date_end"]
+jump pre_mini_game_timeline/
