@@ -1,7 +1,7 @@
 extends CPUParticles2D
 
 #var your_date = get_parent()
-var movement_constant = 4.0;
+var movement_constant = 5.0;
 var allDone = false;
 var alreadyWon = false;
 # Called when the node enters the scene tree for the first time.
