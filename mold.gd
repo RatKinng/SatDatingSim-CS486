@@ -77,4 +77,6 @@ func _on_area_2d_area_exited(area: Area2D) -> void:
 
 func _on_timer_timeout():
 	# You defended your date! You win the game!
+	var dialog = Dialogic.start("winner_timeline")
+	add_child(dialog)
 	allDone = true;

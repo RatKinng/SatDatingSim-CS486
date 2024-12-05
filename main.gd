@@ -6,7 +6,7 @@ func _ready() -> void:
 	dialog = Dialogic.start("hallway-timeline")
 	add_child(dialog)
 	Dialogic.signal_event.connect(_date_ended)
-	
+	#Dialogic.signal_event.connect(_winning)
 	
 	pass
 
@@ -14,14 +14,21 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	pass
 	
+var minil = 0
 func _date_ended(date_ended) -> void:
-	dialog.queue_free()
+	#dialog.queue_free()
 	var MINI = preload("res://D8 nite.tscn")
-	var minil = MINI.instantiate()
+	minil = MINI.instantiate()
 	add_child(minil)
+	#Dialogic.signal_event.connect(_winning)
+	
+	
 	#remove_child(dialog)
 	#_lawler()
 	pass
+
+
+
 
 func _lawler() -> void:
 	var LAW = preload("res://node_2d.tscn")

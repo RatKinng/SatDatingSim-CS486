@@ -119,7 +119,6 @@ _data = {
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(572, 353)
 texture = ExtResource("1_c5tup")
 
