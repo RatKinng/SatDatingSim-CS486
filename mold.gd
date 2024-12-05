@@ -73,4 +73,5 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 
 func _on_lose_area_area_entered(area: Area2D) -> void:
-	print(area.name)
+	# The static gets to the lose area, and you lose the game!
+	print("Loser!") # placeholder
