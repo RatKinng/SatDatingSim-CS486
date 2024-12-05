@@ -70,11 +70,12 @@ texture = ExtResource("1_f2fy1")
 [node name="BR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(5400, 3000)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -101,11 +102,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UR_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(5400, -3200)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -132,11 +134,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-5300, -3200)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -163,11 +166,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="BL_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(-5300, 3000)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -194,11 +198,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="UM_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(0, -3100)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -225,11 +230,12 @@ polygon = PackedVector2Array(-1, -304.2, -1, -301.9, -286.9, 5, -289, 5, -289, 1
 [node name="BM_particle_spawner" type="CPUParticles2D" parent="Area2D/AmppsBetter"]
 position = Vector2(0, 3100)
 scale = Vector2(6.25, 6.25)
-amount = 2000
+amount = 6000
 lifetime = 600.0
-speed_scale = 15.0
+speed_scale = 5.0
 explosiveness = 0.3
 randomness = 1.0
+lifetime_randomness = 0.65
 texture = ExtResource("2_ko4x7")
 emission_shape = 1
 emission_sphere_radius = 100.0
@@ -312,12 +318,22 @@ stream = ExtResource("13_vgpt6")
 autoplay = true
 
 [connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/UL_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/BL_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/UM_particle_spawner" method="_on_area_2d_area_exited"]
+[connection signal="area_exited" from="Area2D" to="Area2D/AmppsBetter/BM_particle_spawner" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BR_particle_spawner/BR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_br_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UR_particle_spawner/UR_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UL_particle_spawner/UL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ul_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BL_particle_spawner/BL_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bl_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_um_particle_area_area_entered"]
-[connection signal="area_entered" from="Area2D/AmppsBetter/UM_particle_spawner/UM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_ur_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/AmppsBetter/BM_particle_spawner/BM_particle_area" to="spray_n_play/WindexHand/spray/spray_particle_area/particleCollide" method="_on_bm_particle_area_area_entered"]
 [connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/BR_particle_spawner" method="_on_lose_area_area_entered"]
 [connection signal="area_entered" from="Area2D/LoseArea" to="Area2D/AmppsBetter/UR_particle_spawner" method="_on_lose_area_area_entered"]
