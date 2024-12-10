@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	# Turn off your collision
-	remove_user_signal("on_loser_area_entered")
+	#remove_user_signal("on_loser_area_entered")
+	pass

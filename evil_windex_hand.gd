@@ -23,9 +23,8 @@ func _input(InputEvent) -> void:
 	if InputEvent is InputEventMouseButton and InputEvent.pressed:
 		# Spray out some particles
 		if($spray.emitting == true):
+			# Give particles time to dissipate
 			return
 		$spray.emitting = true;
-		#add_child(particleCreator)
 		# Turn on the collision area
 		get_node("spray/spray_particle_area/particleCollide").set_deferred("disabled", false);
-	#get_node("spray/spray_particle_area/particleCollide").set_deferred("disabled", true);

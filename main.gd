@@ -20,14 +20,6 @@ func _date_ended(date_ended) -> void:
 	var MINI = preload("res://D8 nite.tscn")
 	minil = MINI.instantiate()
 	add_child(minil)
-	#Dialogic.signal_event.connect(_winning)
-	
-	
-	#remove_child(dialog)
-	#_lawler()
-	pass
-
-
 
 
 func _lawler() -> void:

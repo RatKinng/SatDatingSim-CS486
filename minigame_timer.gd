@@ -3,7 +3,7 @@ extends Timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	start(30.0);
+	start(60.0);
 	pass # Replace with function body.
 
 

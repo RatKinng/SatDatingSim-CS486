@@ -1,27 +1,17 @@
 extends CPUParticles2D
 
-#var your_date = get_parent()
-var movement_constant = 4.0;
+var movement_constant = 3.0; # Will drastically vary on speed changes depending on whether my laptop is plugged in or not
 var allDone = false;
 var alreadyWon = false;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	# Create the minigame timer
-	#await get_tree().create_timer(10.0).timeout;
 	pass
 	
-#var done = false
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(_delta: float) -> void:
 	if(allDone == true):
 		movement_constant = 0.0;
-	#Dialogic.signal_event.connect(_date_ended)
-#
-	#if(done == false):
-		#pass
-	#else:
-		#var y_to_parent = get_position().y # Distance from parent to particles in y
-		#var x_to_parent = get_position().x # Distance from parent to particles in x
+
 		
 	var loseColliderArea = get_parent().get_parent().get_node("LoseCollider");
 	var y_to_parent = loseColliderArea.get_position().y; # Y coordinate of the lose collision area
@@ -49,9 +39,6 @@ func _process(_delta: float) -> void:
 	if(mold_y != 0) or (mold_x != 0):
 		transform = Transform2D(0.0, attack_vec);
 
-#func _date_ended() -> void:
-	#done = true
-
 
 func reset(x_position: int, y_position: int) -> void:
 	if(allDone == true):
@@ -59,7 +46,7 @@ func reset(x_position: int, y_position: int) -> void:
 		queue_free();
 	var reset_vec = Vector2(x_position, y_position)
 	transform = Transform2D(0.0, reset_vec);
-	movement_constant += 0.4; # Up the difficulty
+	movement_constant += 0.1; # Up the difficulty ever so slightly
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
@@ -75,10 +62,6 @@ func _on_lose_area_area_entered(area: Area2D) -> void:
 	if(allDone == true):
 		queue_free();
 		return
-	#remove_child($Area2D)
-	#remove_child($CleanroomOutside)
-	#var law = LAW.instantiate()
-	#add_child(law)
 
 
 func _on_area_2d_area_exited(area: Area2D) -> void:
