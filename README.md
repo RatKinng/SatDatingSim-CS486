@@ -1,7 +1,9 @@
 # SatDatingSim-CS486
 
 Repo for SS-EP1 Dating sim for CS 486 Project
-Creators: Caleb Fronek & Mary Boling
+Creators: Caleb Fronek & Mary Bolling
+
+Wanna play this game? [Get it here](https://drive.google.com/drive/u/0/folders/19hbzE6CeH1B2TYciw8KTJtTmXgJWUuSg)
 
 Reference material:
 
